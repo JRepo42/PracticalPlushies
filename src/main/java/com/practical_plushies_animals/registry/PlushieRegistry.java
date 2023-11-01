@@ -15,16 +15,16 @@ import java.util.ArrayList;
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
-    public static final Block ALLAY_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block AXOLOTYL_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block BEE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block CHICKEN_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block COW_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block PARROT_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block PIG_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block SHEEP_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
-    public static final Block TURTLE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block ALLAY_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block AXOLOTYL_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block BEE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block CHICKEN_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block COW_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block PARROT_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block PIG_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block SHEEP_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block TURTLE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");

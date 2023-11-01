@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 public class DataGeneration implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-
+		FabricDataGenerator.Pack myPack = fabricDataGenerator.createPack();
+		myPack.addProvider(PlushieLootTables::new);
 	}
 }

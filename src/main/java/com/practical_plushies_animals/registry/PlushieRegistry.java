@@ -19,5 +19,6 @@ public class PlushieRegistry {
     public static void registerPlushie(String identifier, Block plushieInstance) {
         Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
         Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
+        PracticalPlushiesAnimals.LOGGER.info("Hello Fabric world!");
     }
 }

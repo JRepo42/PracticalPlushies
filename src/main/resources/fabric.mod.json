@@ -19,7 +19,7 @@
           "com.practical_plushies_animals.PracticalPlushiesAnimals"
 		],
 		"fabric-datagen": [
-			"com.practical_plushies_animals.DataGeneration"
+			"com.practical_plushies_animals.datagen.DataGeneration"
 		]
 	},
 	"mixins": [

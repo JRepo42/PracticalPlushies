@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlushieLootTables extends FabricBlockLootTableProvider {
@@ -14,17 +15,17 @@ public class PlushieLootTables extends FabricBlockLootTableProvider {
         super(dataOutput);
     }
 
-    private static HashMap<Block, BlockItem> dataPlushieMap = new HashMap<Block, BlockItem>();
+    private static Block[] dataBlockArray;
 
-    public static void addDropEntries(HashMap plushieMap) {
-        PracticalPlushiesAnimals.LOGGER.info(plushieMap.toString());
-        dataPlushieMap = plushieMap;
+    public static void addDropEntries(ArrayList<Block> blockArray) {
+        PracticalPlushiesAnimals.LOGGER.info(blockArray.toString());
+        dataBlockArray = blockArray.toArray(new Block[0]);
     }
 
     @Override
     public void generate() {
-        for (Block i : dataPlushieMap.keySet()) {
-            addDrop(i, dataPlushieMap.get(i).asItem());
+        for (int i = 0; i < dataBlockArray.length; i++) {
+            addDrop(dataBlockArray[i]);
         }
     }
 }

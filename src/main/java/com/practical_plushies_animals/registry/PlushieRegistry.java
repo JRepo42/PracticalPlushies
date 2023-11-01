@@ -10,10 +10,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlushieRegistry {
-    private static HashMap<Block, BlockItem> plushieMap = new HashMap<Block, BlockItem>();
+    private static ArrayList<Block> plushies = new ArrayList<>();
 
     public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
     public static final Block PIG_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
@@ -21,15 +22,13 @@ public class PlushieRegistry {
     public static void register() {
         registerPlushie("fox_plushie", FOX_PLUSHIE);
         registerPlushie("pig_plushie", PIG_PLUSHIE);
-        PlushieLootTables.addDropEntries(plushieMap);
+        PlushieLootTables.addDropEntries(plushies);
     }
 
     public static void registerPlushie(String identifier, Block plushieInstance) {
-        final BlockItem PLUSHIE_ITEM = new BlockItem(plushieInstance, new FabricItemSettings());
-        
         Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
-        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), PLUSHIE_ITEM);
+        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
 
-        plushieMap.put(plushieInstance, PLUSHIE_ITEM);
+        plushies.add(plushieInstance);
     }
 }

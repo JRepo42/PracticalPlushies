@@ -15,16 +15,32 @@ import java.util.ArrayList;
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
+    public static final Block ALLAY_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block AXOLOTYL_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block BEE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block CHICKEN_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block COW_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
     public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block PARROT_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
     public static final Block PIG_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block SHEEP_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
+    public static final Block TURTLE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
 
     public static void register() {
-        registerPlushie("fox_plushie", FOX_PLUSHIE);
-        registerPlushie("pig_plushie", PIG_PLUSHIE);
+        registerPlushie(ALLAY_PLUSHIE, "allay_plushie");
+        registerPlushie(AXOLOTYL_PLUSHIE, "axolotyl_plushie");
+        registerPlushie(BEE_PLUSHIE, "bee_plushie");
+        registerPlushie(CHICKEN_PLUSHIE, "chicken_plushie");
+        registerPlushie(COW_PLUSHIE, "cow_plushie");
+        registerPlushie(FOX_PLUSHIE, "fox_plushie");
+        registerPlushie(PARROT_PLUSHIE, "parrot_plushie");
+        registerPlushie(PIG_PLUSHIE, "pig_plushie");
+        registerPlushie(SHEEP_PLUSHIE, "sheep_plushie");
+        registerPlushie(TURTLE_PLUSHIE, "turtle_plushie");
         PlushieLootTables.addDropEntries(plushies);
     }
 
-    public static void registerPlushie(String identifier, Block plushieInstance) {
+    public static void registerPlushie(Block plushieInstance, String identifier) {
         Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
         Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
 

@@ -18,9 +18,6 @@
 		"main": [
           "com.practical_plushies_animals.PracticalPlushiesAnimals"
 		],
-		"client": [
-			"com.practical_plushies_animals.PracticalPlushiesAnimalsClient"
-		],
 		"fabric-datagen": [
 			"com.practical_plushies_animals.datagen.DataGeneration"
 		]

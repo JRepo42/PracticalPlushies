@@ -2,6 +2,7 @@ package com.practical_plushies_animals.registry;
 
 import com.practical_plushies_animals.PracticalPlushiesAnimals;
 import com.practical_plushies_animals.datagen.PlushieLootTables;
+import com.practical_plushies_animals.plushies.Plushie;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
-    public static final Block ALLAY_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque());
     public static final Block AXOLOTYL_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block BEE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block CHICKEN_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
@@ -38,6 +39,7 @@ public class PlushieRegistry {
         registerPlushie(SHEEP_PLUSHIE, "sheep_plushie");
         registerPlushie(TURTLE_PLUSHIE, "turtle_plushie");
         PlushieLootTables.addDropEntries(plushies);
+        PlushieItemGroupRegistry.addItemGroupEntries(plushies);
     }
 
     public static void registerPlushie(Block plushieInstance, String identifier) {

@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import java.util.HashMap;
 
 public class PlushieRegistry {
-    private static HashMap<String, String> plushieMap = new HashMap<String, String>();
+    private static HashMap<Block, BlockItem> plushieMap = new HashMap<Block, BlockItem>();
 
     public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
     public static final Block PIG_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
@@ -25,9 +25,11 @@ public class PlushieRegistry {
     }
 
     public static void registerPlushie(String identifier, Block plushieInstance) {
+        final BlockItem PLUSHIE_ITEM = new BlockItem(plushieInstance, new FabricItemSettings());
+        
         Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
-        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), PLUSHIE_ITEM);
 
-        plushieMap.put(identifier, identifier);
+        plushieMap.put(plushieInstance, PLUSHIE_ITEM);
     }
 }

@@ -11,7 +11,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();

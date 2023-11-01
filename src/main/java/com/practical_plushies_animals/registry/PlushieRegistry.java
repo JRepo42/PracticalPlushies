@@ -1,8 +1,23 @@
 package com.practical_plushies_animals.registry;
 
+import com.practical_plushies_animals.PracticalPlushiesAnimals;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+
 public class PlushieRegistry {
+    public static final Block FOX_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f));
 
     public static void register() {
+        registerPlushie("fox_plushie", FOX_PLUSHIE);
+    }
 
+    public static void registerPlushie(String identifier, Block plushieInstance) {
+        Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
+        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
     }
 }

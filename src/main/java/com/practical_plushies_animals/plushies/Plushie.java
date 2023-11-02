@@ -21,19 +21,9 @@ public class Plushie extends HorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        Direction dir = state.get(FACING);
-        switch(dir) {
-            case NORTH:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.5f);
-            case SOUTH:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.5f, 1.0f, 1.0f, 1.0f);
-            case EAST:
-                return VoxelShapes.cuboid(0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
-            case WEST:
-                return VoxelShapes.cuboid(0.0f, 0.0f, 0.0f, 0.5f, 1.0f, 1.0f);
-            default:
-                return VoxelShapes.fullCube();
-        }
+        VoxelShape shape = VoxelShapes.empty();
+        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+        return shape;
     }
 
     @Override

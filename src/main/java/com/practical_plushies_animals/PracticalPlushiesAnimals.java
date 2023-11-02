@@ -1,6 +1,7 @@
 package com.practical_plushies_animals;
 
 import com.practical_plushies_animals.registry.PlushieItemGroupRegistry;
+import com.practical_plushies_animals.registry.PlushieParticleRegistry;
 import com.practical_plushies_animals.registry.PlushieRegistry;
 import mod.azure.azurelib.AzureLib;
 import net.fabricmc.api.ModInitializer;
@@ -17,5 +18,6 @@ public class PracticalPlushiesAnimals implements ModInitializer {
 		AzureLib.initialize();
 		PlushieRegistry.register();
 		PlushieItemGroupRegistry.register();
+		PlushieParticleRegistry.register();
 	}
 }

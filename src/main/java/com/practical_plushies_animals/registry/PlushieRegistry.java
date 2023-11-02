@@ -25,7 +25,7 @@ public class PlushieRegistry {
     public static final Block PARROT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block PIG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block TURTLE_PLUSHIE = new Block(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");

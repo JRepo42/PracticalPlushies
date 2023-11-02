@@ -15,7 +15,6 @@ public class PlushieLootTables extends FabricBlockLootTableProvider {
     private static Block[] dataBlockArray;
 
     public static void addDropEntries(ArrayList<Block> blockArray) {
-        PracticalPlushiesAnimals.LOGGER.info(blockArray.toString());
         dataBlockArray = blockArray.toArray(new Block[0]);
     }
 

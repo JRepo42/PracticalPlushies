@@ -22,14 +22,6 @@ public class PlushieAppearanceParticle extends Particle {
     private final Model model;
     private final RenderLayer layer;
 
-    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, String mob) {
-        super(clientWorld, d, e, f);
-        this.layer = RenderLayer.getEntityTranslucent(new Identifier("textures/entity/turtle/big_sea_turtle.png"));
-        this.model = new TurtleEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.TURTLE));
-        this.gravityStrength = 0.0F;
-        this.maxAge = 30;
-    }
-
     PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, EntityModel<LivingEntity> model, Identifier identifier) {
         super(clientWorld, d, e, f);
         this.layer = RenderLayer.getEntityTranslucent(identifier);

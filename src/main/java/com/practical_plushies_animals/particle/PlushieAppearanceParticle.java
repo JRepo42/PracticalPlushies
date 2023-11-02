@@ -96,7 +96,7 @@ public class PlushieAppearanceParticle extends Particle {
                 case "bee":
                     return new Identifier("textures/entity/bee/bee.png");
                 case "chicken":
-                    return new Identifier("textures/entity/chicken/chicken.png");
+                    return new Identifier("textures/entity/chicken.png");
                 case "cow":
                     return new Identifier("textures/entity/cow/cow.png");
                 case "fox":

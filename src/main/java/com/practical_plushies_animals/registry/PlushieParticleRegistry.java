@@ -32,6 +32,5 @@ public class PlushieParticleRegistry {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(PracticalPlushiesAnimals.MODID, "pig_plushie_appearance"), PIG_PLUSHIE_APPEARANCE);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(PracticalPlushiesAnimals.MODID, "sheep_plushie_appearance"), SHEEP_PLUSHIE_APPEARANCE);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(PracticalPlushiesAnimals.MODID, "turtle_plushie_appearance"), TURTLE_PLUSHIE_APPEARANCE);
-
     }
 }

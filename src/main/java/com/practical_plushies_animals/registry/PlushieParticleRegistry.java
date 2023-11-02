@@ -9,7 +9,16 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class PlushieParticleRegistry {
+
+    public static final DefaultParticleType ALLAY_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType AXOLOTL_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType BEEL_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType CHICKEN_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType COW_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType FOX_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType PARROT_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
     public static final DefaultParticleType PIG_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
+    public static final DefaultParticleType SHEEP_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
     public static final DefaultParticleType TURTLE_PLUSHIE_APPEARANCE = FabricParticleTypes.simple();
 
     public static void register() {

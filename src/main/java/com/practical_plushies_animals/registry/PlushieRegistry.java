@@ -17,7 +17,7 @@ public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
     public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque());
-    public static final Block AXOLOTYL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block AXOLOTL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block BEE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block CHICKEN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
     public static final Block COW_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
@@ -29,7 +29,7 @@ public class PlushieRegistry {
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");
-        registerPlushie(AXOLOTYL_PLUSHIE, "axolotyl_plushie");
+        registerPlushie(AXOLOTL_PLUSHIE, "axolotl_plushie");
         registerPlushie(BEE_PLUSHIE, "bee_plushie");
         registerPlushie(CHICKEN_PLUSHIE, "chicken_plushie");
         registerPlushie(COW_PLUSHIE, "cow_plushie");

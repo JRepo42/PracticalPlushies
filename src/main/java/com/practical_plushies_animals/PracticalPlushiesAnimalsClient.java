@@ -12,3 +12,4 @@ public class PracticalPlushiesAnimalsClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(PlushieParticleRegistry.TURTLE_PLUSHIE_APPEARANCE, new PlushieAppearanceParticle.Factory("turtle"));
     }
 }
+

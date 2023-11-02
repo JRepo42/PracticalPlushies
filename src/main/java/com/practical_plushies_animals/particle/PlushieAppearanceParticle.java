@@ -60,10 +60,26 @@ public class PlushieAppearanceParticle extends Particle {
     public static class Factory implements ParticleFactory<DefaultParticleType> {
         private final String mob;
 
-        private EntityModel<LivingEntity> getModel() {
+        private Model getModel() {
             switch (mob) {
+                case "allay":
+                    return new AllayEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.ALLAY));
+                case "axolotl":
+                    return new AxolotlEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.AXOLOTL));
+                case "bee":
+                    return new BeeEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.BEE));
+                case "chicken":
+                    return new ChickenEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.CHICKEN));
+                case "cow":
+                    return new CowEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.COW));
+                case "fox":
+                    return new FoxEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.FOX));
+                case "parrot":
+                    return new ParrotEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.PARROT));
                 case "pig":
                     return new PigEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.PIG));
+                case "sheep":
+                    return new SheepEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.SHEEP));
                 case "turtle":
                     return new TurtleEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.TURTLE));
                 default:
@@ -87,7 +103,7 @@ public class PlushieAppearanceParticle extends Particle {
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new PlushieAppearanceParticle(clientWorld, d, e, f, getModel(), getIdentifier());
+            return new PlushieAppearanceParticle(clientWorld, d, e, f, (EntityModel<LivingEntity>) getModel(), getIdentifier());
         }
     }
 }

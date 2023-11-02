@@ -7,15 +7,11 @@ import net.minecraft.client.model.Model;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleFactory;
 import net.minecraft.client.particle.ParticleTextureSheet;
-import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.client.render.*;
-import net.minecraft.client.render.entity.ElderGuardianEntityRenderer;
-import net.minecraft.client.render.entity.PigEntityRenderer;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.entity.model.GuardianEntityModel;
-import net.minecraft.client.render.entity.model.PigEntityModel;
+import net.minecraft.client.render.entity.model.*;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -26,10 +22,18 @@ public class PlushieAppearanceParticle extends Particle {
     private final Model model;
     private final RenderLayer layer;
 
-    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, String test) {
+    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, String mob) {
         super(clientWorld, d, e, f);
-        this.layer = RenderLayer.getEntityTranslucent(new Identifier("textures/entity/pig/pig.png"));
-        this.model = new PigEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.PIG));
+        this.layer = RenderLayer.getEntityTranslucent(new Identifier("textures/entity/turtle/big_sea_turtle.png"));
+        this.model = new TurtleEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.TURTLE));
+        this.gravityStrength = 0.0F;
+        this.maxAge = 30;
+    }
+
+    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, EntityModel<LivingEntity> model, Identifier identifier) {
+        super(clientWorld, d, e, f);
+        this.layer = RenderLayer.getEntityTranslucent(identifier);
+        this.model = model;
         this.gravityStrength = 0.0F;
         this.maxAge = 30;
     }
@@ -54,11 +58,36 @@ public class PlushieAppearanceParticle extends Particle {
 
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
-        public Factory() {
+        private final String mob;
+
+        private EntityModel<LivingEntity> getModel() {
+            switch (mob) {
+                case "pig":
+                    return new PigEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.PIG));
+                case "turtle":
+                    return new TurtleEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.TURTLE));
+                default:
+                    return new EndermiteEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.ENDERMITE));
+            }
+        }
+
+        private Identifier getIdentifier() {
+            switch (mob) {
+                case "pig":
+                    return new Identifier("textures/entity/pig/pig.png");
+                case "turtle":
+                    return new Identifier("textures/entity/turtle/big_sea_turtle.png");
+                default:
+                    return new Identifier("textures/entity/endermite/endermite.png");
+            }
+        }
+
+        public Factory(String mob) {
+            this.mob = mob;
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new PlushieAppearanceParticle(clientWorld, d, e, f, "hey!");
+            return new PlushieAppearanceParticle(clientWorld, d, e, f, getModel(), getIdentifier());
         }
     }
 }

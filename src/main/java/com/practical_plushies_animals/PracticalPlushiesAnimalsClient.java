@@ -8,6 +8,6 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 public class PracticalPlushiesAnimalsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ParticleFactoryRegistry.getInstance().register(PlushieParticleRegistry.PLUSHIE_APPEARANCE, PlushieAppearanceParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(PlushieParticleRegistry.PLUSHIE_APPEARANCE, new PlushieAppearanceParticle.Factory());
     }
 }

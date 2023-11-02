@@ -26,7 +26,7 @@ public class PlushieAppearanceParticle extends Particle {
     private final Model model;
     private final RenderLayer layer;
 
-    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f) {
+    PlushieAppearanceParticle(ClientWorld clientWorld, double d, double e, double f, String test) {
         super(clientWorld, d, e, f);
         this.layer = RenderLayer.getEntityTranslucent(new Identifier("textures/entity/pig/pig.png"));
         this.model = new PigEntityModel(MinecraftClient.getInstance().getEntityModelLoader().getModelPart(EntityModelLayers.PIG));
@@ -54,14 +54,11 @@ public class PlushieAppearanceParticle extends Particle {
 
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider sprites;
-
-        public Factory(SpriteProvider spriteProvider) {
-            this.sprites = spriteProvider;
+        public Factory() {
         }
 
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new PlushieAppearanceParticle(clientWorld, d, e, f);
+            return new PlushieAppearanceParticle(clientWorld, d, e, f, "hey!");
         }
     }
 }

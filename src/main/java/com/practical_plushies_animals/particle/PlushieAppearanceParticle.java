@@ -89,8 +89,24 @@ public class PlushieAppearanceParticle extends Particle {
 
         private Identifier getIdentifier() {
             switch (mob) {
+                case "allay":
+                    return new Identifier("textures/entity/allay/allay.png");
+                case "axolotl":
+                    return new Identifier("textures/entity/axolotl/axolotl_lucy.png");
+                case "bee":
+                    return new Identifier("textures/entity/bee/bee.png");
+                case "chicken":
+                    return new Identifier("textures/entity/chicken/chicken.png");
+                case "cow":
+                    return new Identifier("textures/entity/cow/cow.png");
+                case "fox":
+                    return new Identifier("textures/entity/fox/fox.png");
+                case "parrot":
+                    return new Identifier("textures/entity/parrot/parrot_red_blue.png");
                 case "pig":
                     return new Identifier("textures/entity/pig/pig.png");
+                case "sheep":
+                    return new Identifier("textures/entity/sheep/sheep.png");
                 case "turtle":
                     return new Identifier("textures/entity/turtle/big_sea_turtle.png");
                 default:

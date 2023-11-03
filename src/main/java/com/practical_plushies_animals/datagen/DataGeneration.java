@@ -8,5 +8,6 @@ public class DataGeneration implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack myPack = fabricDataGenerator.createPack();
 		myPack.addProvider(PlushieLootTables::new);
+		myPack.addProvider(PlushieRecipes::new);
 	}
 }

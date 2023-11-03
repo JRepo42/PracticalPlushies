@@ -30,7 +30,7 @@ public class PlushieRecipes extends FabricRecipeProvider {
         generatePlushieRecipe(PlushieRegistry.PARROT_PLUSHIE, Blocks.RED_WOOL, Blocks.LIGHT_BLUE_WOOL, Items.FEATHER, exporter);
         generatePlushieRecipe(PlushieRegistry.PIG_PLUSHIE, Blocks.PINK_WOOL, Blocks.MAGENTA_WOOL, Items.CARROT, exporter);
         generatePlushieRecipe(PlushieRegistry.SHEEP_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.WHEAT, exporter);
-        generatePlushieRecipe(PlushieRegistry.TURTLE_PLUSHIE, Blocks.LIME_WOOL, Blocks.GREEN_WOOL, Items.SEAGRASS, exporter);
+        generatePlushieRecipe(PlushieRegistry.TURTLE_PLUSHIE, Blocks.LIME_WOOL, Blocks.GREEN_WOOL, Items.TURTLE_EGG, exporter);
     }
 
     private void generatePlushieRecipe(Block outputPlushie, Block primaryWool, Block secondaryWool, Item specialItem, Consumer<RecipeJsonProvider> exporter) {

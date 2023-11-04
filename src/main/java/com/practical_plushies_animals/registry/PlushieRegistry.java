@@ -16,16 +16,16 @@ import java.util.ArrayList;
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
-    public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque());
-    public static final Block AXOLOTL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block BEE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block CHICKEN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block COW_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block FOX_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block PARROT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block PIG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
-    public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque());
+    public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque(), "");
+    public static final Block AXOLOTL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
+    public static final Block BEE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "");
+    public static final Block CHICKEN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "");
+    public static final Block COW_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
+    public static final Block FOX_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "");
+    public static final Block PARROT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "");
+    public static final Block PIG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
+    public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
+    public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");

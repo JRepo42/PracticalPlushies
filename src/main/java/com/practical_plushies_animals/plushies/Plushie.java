@@ -15,8 +15,11 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
 public class Plushie extends HorizontalFacingBlock implements Waterloggable {
-    public Plushie(Settings settings) {
+    private String plushieSize = "";
+
+    public Plushie(Settings settings, String size) {
         super(settings);
+        this.plushieSize = size;
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
@@ -25,7 +28,23 @@ public class Plushie extends HorizontalFacingBlock implements Waterloggable {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         VoxelShape shape = VoxelShapes.empty();
-        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+        //shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+
+        switch (plushieSize) {
+            case "small":
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+                break;
+            case "big":
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+                break;
+            case "floor":
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.4375, 0.9375));
+                break;
+            default:
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+                break;
+        }
+
         return shape;
     }
 

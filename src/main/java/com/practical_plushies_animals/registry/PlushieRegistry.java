@@ -28,6 +28,17 @@ public class PlushieRegistry {
     public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
     public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
 
+    public static final Block CAMEL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block HORSE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block MOOSHROOM_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block FROG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "small");
+    public static final Block RABBIT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "small");
+    public static final Block CAT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big");
+    public static final Block WOLF_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big");
+    public static final Block SNIFFER_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big_floor");
+    public static final Block DOLPHIN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block PANDA_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big_floor");
+
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");
         registerPlushie(AXOLOTL_PLUSHIE, "axolotl_plushie");
@@ -39,6 +50,18 @@ public class PlushieRegistry {
         registerPlushie(PIG_PLUSHIE, "pig_plushie");
         registerPlushie(SHEEP_PLUSHIE, "sheep_plushie");
         registerPlushie(TURTLE_PLUSHIE, "turtle_plushie");
+
+        registerPlushie(CAMEL_PLUSHIE, "camel_plushie");
+        registerPlushie(HORSE_PLUSHIE, "horse_plushie");
+        registerPlushie(MOOSHROOM_PLUSHIE, "mooshroom_plushie");
+        registerPlushie(FROG_PLUSHIE, "frog_plushie");
+        registerPlushie(RABBIT_PLUSHIE, "rabbit_plushie");
+        registerPlushie(CAT_PLUSHIE, "cat_plushie");
+        registerPlushie(WOLF_PLUSHIE, "wolf_plushie");
+        registerPlushie(SNIFFER_PLUSHIE, "sniffer_plushie");
+        registerPlushie(DOLPHIN_PLUSHIE, "dolphin_plushie");
+        registerPlushie(PANDA_PLUSHIE, "panda_plushie");
+
         PlushieLootTables.addDropEntries(plushies);
         PlushieItemGroupRegistry.addItemGroupEntries(plushies);
     }

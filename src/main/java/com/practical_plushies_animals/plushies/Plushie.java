@@ -29,7 +29,6 @@ public class Plushie extends HorizontalFacingBlock implements Waterloggable {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         boolean northOrSouth = state.get(FACING) == Direction.SOUTH || state.get(FACING) == Direction.NORTH;
         VoxelShape shape = VoxelShapes.empty();
-        //shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
 
         switch (plushieSize) {
             case "small":
@@ -40,6 +39,13 @@ public class Plushie extends HorizontalFacingBlock implements Waterloggable {
                     shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0, 0.0625, 0.8125, 0.75, 0.75));
                 } else {
                     shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.1875, 0.75, 0.75, 0.8125));
+                }
+                break;
+            case "big_floor":
+                if (northOrSouth) {
+                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0, 0.0625, 0.8125, 0.9, 0.75));
+                } else {
+                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.1875, 0.75, 0.9, 0.8125));
                 }
                 break;
             case "floor":

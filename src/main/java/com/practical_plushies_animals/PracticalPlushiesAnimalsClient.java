@@ -32,7 +32,6 @@ public class PracticalPlushiesAnimalsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.PIG_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.SHEEP_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.TURTLE_PLUSHIE, RenderLayer.getCutout());
-
     }
 }
 

@@ -32,10 +32,10 @@ public class Plushie extends HorizontalFacingBlock implements Waterloggable {
 
         switch (plushieSize) {
             case "small":
-                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.5, 0.75));
                 break;
             case "big":
-                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
+                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0, 0.0625, 0.8125, 0.75, 0.75));
                 break;
             case "floor":
                 shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.4375, 0.9375));

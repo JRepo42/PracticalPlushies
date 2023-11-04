@@ -43,9 +43,9 @@ public class Plushie extends HorizontalFacingBlock implements Waterloggable {
                 break;
             case "big_floor":
                 if (northOrSouth) {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0, 0.0625, 0.8125, 0.9, 0.75));
+                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.5, 0.9375));
                 } else {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.1875, 0.75, 0.9, 0.8125));
+                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.5, 0.9375));
                 }
                 break;
             case "floor":

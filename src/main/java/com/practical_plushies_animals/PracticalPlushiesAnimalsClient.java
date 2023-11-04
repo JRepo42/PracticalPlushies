@@ -32,6 +32,17 @@ public class PracticalPlushiesAnimalsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.PIG_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.SHEEP_PLUSHIE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.TURTLE_PLUSHIE, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.CAMEL_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.HORSE_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.MOOSHROOM_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.FROG_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.RABBIT_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.CAT_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.WOLF_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.SNIFFER_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.DOLPHIN_PLUSHIE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieRegistry.PANDA_PLUSHIE, RenderLayer.getCutout());
     }
 }
 

@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -16,16 +17,16 @@ import java.util.ArrayList;
 public class PlushieRegistry {
     private static ArrayList<Block> plushies = new ArrayList<>();
 
-    public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque(), "small");
-    public static final Block AXOLOTL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
-    public static final Block BEE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "small");
-    public static final Block CHICKEN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "big");
-    public static final Block COW_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
-    public static final Block FOX_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "big");
-    public static final Block PARROT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "small");
-    public static final Block PIG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
-    public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
-    public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque(), "floor");
+    public static final Block ALLAY_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(10.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "small");
+    public static final Block AXOLOTL_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block BEE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "small");
+    public static final Block CHICKEN_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big");
+    public static final Block COW_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block FOX_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "big");
+    public static final Block PARROT_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "small");
+    public static final Block PIG_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block SHEEP_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
+    public static final Block TURTLE_PLUSHIE = new Plushie(FabricBlockSettings.create().strength(1.0f).nonOpaque().sounds(BlockSoundGroup.WOOL), "floor");
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");

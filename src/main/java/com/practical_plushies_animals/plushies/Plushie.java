@@ -15,47 +15,17 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
 public class Plushie extends HorizontalFacingBlock implements Waterloggable {
-    private String plushieSize = "";
-
-    public Plushie(Settings settings, String size) {
+    public Plushie(Settings settings) {
         super(settings);
-        this.plushieSize = size;
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
+
     }
 
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        boolean northOrSouth = state.get(FACING) == Direction.SOUTH || state.get(FACING) == Direction.NORTH;
         VoxelShape shape = VoxelShapes.empty();
-
-        switch (plushieSize) {
-            case "small":
-                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.5, 0.75));
-                break;
-            case "big":
-                if (northOrSouth) {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.1875, 0, 0.0625, 0.8125, 0.75, 0.75));
-                } else {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.1875, 0.75, 0.75, 0.8125));
-                }
-                break;
-            case "big_floor":
-                if (northOrSouth) {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.5, 0.9375));
-                } else {
-                    shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.5, 0.9375));
-                }
-                break;
-            case "floor":
-                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.4375, 0.9375));
-                break;
-            default:
-                shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.21875, 0, 0.25, 0.765625, 0.8125, 0.75));
-                break;
-        }
-
         return shape;
     }
 

@@ -2,7 +2,11 @@ package com.practical_plushies_animals.registry;
 
 import com.practical_plushies_animals.PracticalPlushiesAnimals;
 import com.practical_plushies_animals.datagen.PlushieLootTables;
+import com.practical_plushies_animals.plushies.variants.BigFloorPlushie;
+import com.practical_plushies_animals.plushies.variants.BigPlushie;
+import com.practical_plushies_animals.plushies.variants.FloorPlushie;
 import com.practical_plushies_animals.plushies.Plushie;
+import com.practical_plushies_animals.plushies.variants.SmallPlushie;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -19,27 +23,27 @@ public class PlushieRegistry {
 
     private static FabricBlockSettings DEFAULT_PLUSHIE_SETTINGS = FabricBlockSettings.create().strength(0.5f).nonOpaque().sounds(BlockSoundGroup.WOOL);
 
-    public static final Block ALLAY_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "small");
-    public static final Block AXOLOTL_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block BEE_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "small");
-    public static final Block CHICKEN_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big");
-    public static final Block COW_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block FOX_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big");
-    public static final Block PARROT_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "small");
-    public static final Block PIG_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block SHEEP_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block TURTLE_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
+    public static final Block ALLAY_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block AXOLOTL_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block BEE_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block CHICKEN_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block COW_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block FOX_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block PARROT_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block PIG_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block SHEEP_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block TURTLE_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
 
-    public static final Block CAMEL_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block HORSE_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block MOOSHROOM_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block FROG_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "small");
-    public static final Block RABBIT_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "small");
-    public static final Block CAT_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big");
-    public static final Block WOLF_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big");
-    public static final Block SNIFFER_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big_floor");
-    public static final Block DOLPHIN_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "floor");
-    public static final Block PANDA_PLUSHIE = new Plushie(DEFAULT_PLUSHIE_SETTINGS, "big_floor");
+    public static final Block CAMEL_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block HORSE_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block MOOSHROOM_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block FROG_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block RABBIT_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block CAT_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block WOLF_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block SNIFFER_PLUSHIE = new BigFloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block DOLPHIN_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block PANDA_PLUSHIE = new BigFloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
 
     public static void register() {
         registerPlushie(ALLAY_PLUSHIE, "allay_plushie");

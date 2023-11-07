@@ -2,6 +2,8 @@ package com.practical_plushies_animals.config;
 
 import java.nio.file.Path;
 
+import com.practical_plushies_animals.PracticalPlushiesAnimals;
+
 import elocindev.necronomicon.config.NecConfig;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -15,8 +17,9 @@ public class Config {
         if (!folder.toFile().exists())
             folder.toFile().mkdir();
 
-        return folder.resolve("animals.json").toString();
+        return folder.resolve(PracticalPlushiesAnimals.CONFIG_FILE).toString();
     }
 
-    public boolean enable_animal_plushies = true;
+    public boolean enable_drops = true;
+    // TODO: add drop chances
 }

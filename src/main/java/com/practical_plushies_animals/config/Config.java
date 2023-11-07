@@ -1,14 +1,21 @@
 package com.practical_plushies_animals.config;
 
-import elocindev.necronomicon.api.config.v1.NecConfigAPI;
+import java.nio.file.Path;
+
 import elocindev.necronomicon.config.NecConfig;
+import net.fabricmc.loader.api.FabricLoader;
 
 public class Config {
     @NecConfig
     public static Config INSTANCE;
 
-    public String getFile() {
-        return NecConfigAPI.getFile("animals.json");
+    public static String getFile() {
+        Path folder = FabricLoader.getInstance().getConfigDir().resolve("practical_plushies");
+
+        if (!folder.toFile().exists())
+            folder.toFile().mkdir();
+
+        return folder.resolve("animals.json").toString();
     }
 
     public boolean enable_animal_plushies = true;

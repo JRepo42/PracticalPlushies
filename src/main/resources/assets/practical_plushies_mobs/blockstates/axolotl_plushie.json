@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "practical_plushies_animals:block/axolotl_plushie", "uvlock": false },
-    "facing=east":  { "model": "practical_plushies_animals:block/axolotl_plushie", "y":  90, "uvlock": false },
-    "facing=south": { "model": "practical_plushies_animals:block/axolotl_plushie", "y": 180, "uvlock": false },
-    "facing=west":  { "model": "practical_plushies_animals:block/axolotl_plushie", "y": 270, "uvlock": false }
-  }
-}

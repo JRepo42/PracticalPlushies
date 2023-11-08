@@ -21,7 +21,7 @@ public class PlushieItemGroupRegistry {
     }
 
     private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(PlushieRegistry.FOX_PLUSHIE))
+            .icon(() -> new ItemStack(PlushieRegistry.ZOMBIE_PLUSHIE))
             .displayName(Text.translatable("itemGroup.practical_plushies_animals.plushieGroup"))
             .entries((context, entries) -> {
                 for (int i = 0; i < plushieArray.length; i++) {

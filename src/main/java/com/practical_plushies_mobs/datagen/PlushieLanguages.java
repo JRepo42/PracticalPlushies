@@ -12,26 +12,17 @@ public class PlushieLanguages extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.practical_plushies_mobs.plushieGroup", "Practical Plushies - Mobs!");
-        translationBuilder.add(PlushieRegistry.ALLAY_PLUSHIE, "Allay Plushie");
-        translationBuilder.add(PlushieRegistry.AXOLOTL_PLUSHIE, "Axolotl Plushie");
-        translationBuilder.add(PlushieRegistry.BEE_PLUSHIE, "Bee Plushie");
-        translationBuilder.add(PlushieRegistry.CHICKEN_PLUSHIE, "Chicken Plushie");
-        translationBuilder.add(PlushieRegistry.COW_PLUSHIE, "Cow Plushie");
-        translationBuilder.add(PlushieRegistry.FOX_PLUSHIE, "Fox Plushie");
-        translationBuilder.add(PlushieRegistry.PARROT_PLUSHIE, "Parrot Plushie");
-        translationBuilder.add(PlushieRegistry.PIG_PLUSHIE, "Pig Plushie");
-        translationBuilder.add(PlushieRegistry.SHEEP_PLUSHIE, "Sheep Plushie");
-        translationBuilder.add(PlushieRegistry.TURTLE_PLUSHIE, "Turtle Plushie");
 
-        translationBuilder.add(PlushieRegistry.CAMEL_PLUSHIE, "Camel Plushie");
-        translationBuilder.add(PlushieRegistry.HORSE_PLUSHIE, "Horse Plushie");
-        translationBuilder.add(PlushieRegistry.MOOSHROOM_PLUSHIE, "Mooshroom Plushie");
-        translationBuilder.add(PlushieRegistry.FROG_PLUSHIE, "Frog Plushie");
-        translationBuilder.add(PlushieRegistry.RABBIT_PLUSHIE, "Rabbit Plushie");
-        translationBuilder.add(PlushieRegistry.CAT_PLUSHIE, "Cat Plushie");
-        translationBuilder.add(PlushieRegistry.WOLF_PLUSHIE, "Wolf Plushie");
-        translationBuilder.add(PlushieRegistry.SNIFFER_PLUSHIE, "Sniffer Plushie");
-        translationBuilder.add(PlushieRegistry.DOLPHIN_PLUSHIE, "Dolphin Plushie");
-        translationBuilder.add(PlushieRegistry.PANDA_PLUSHIE, "Panda Plushie");
+        translationBuilder.add(PlushieRegistry.CREEPER_PLUSHIE, "Creeper Plushie");
+        translationBuilder.add(PlushieRegistry.ENDERMAN_PLUSHIE, "Enderman Plushie");
+        translationBuilder.add(PlushieRegistry.GHAST_PLUSHIE, "Ghast Plushie");
+        translationBuilder.add(PlushieRegistry.PHANTOM_PLUSHIE, "Phantom Plushie");
+        translationBuilder.add(PlushieRegistry.SKELETON_PLUSHIE, "Skeleton Plushie");
+        translationBuilder.add(PlushieRegistry.SPIDER_PLUSHIE, "Spider Plushie");
+        translationBuilder.add(PlushieRegistry.WITCH_PLUSHIE, "Witch Plushie");
+        translationBuilder.add(PlushieRegistry.WITHER_SKELETON_PLUSHIE, "Wither Skeleton Plushie");
+        translationBuilder.add(PlushieRegistry.ZOGLIN_PLUSHIE, "Zoglin Plushie");
+        translationBuilder.add(PlushieRegistry.ZOMBIE_PLUSHIE, "Zombie Plushie");
+        translationBuilder.add(PlushieRegistry.SKELETON_HORSE_PLUSHIE, "Skeleton Horse Plushie");
     }
 }

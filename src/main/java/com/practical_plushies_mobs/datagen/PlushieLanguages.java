@@ -11,7 +11,7 @@ public class PlushieLanguages extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        translationBuilder.add("itemGroup.practical_plushies_animals.plushieGroup", "Practical Plushies - Animals!");
+        translationBuilder.add("itemGroup.practical_plushies_mobs.plushieGroup", "Practical Plushies - Mobs!");
         translationBuilder.add(PlushieRegistry.ALLAY_PLUSHIE, "Allay Plushie");
         translationBuilder.add(PlushieRegistry.AXOLOTL_PLUSHIE, "Axolotl Plushie");
         translationBuilder.add(PlushieRegistry.BEE_PLUSHIE, "Bee Plushie");

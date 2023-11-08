@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "practical_plushies_animals",
+	"id": "practical_plushies_mobs",
 	"version": "${version}",
-	"name": "Practical Plushies - Animals!",
+	"name": "Practical Plushies - Mobs!",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -16,17 +16,17 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "com.practical_plushies_animals.PracticalPlushiesAnimals"
+			"com.practical_plushies_mobs.PracticalPlushiesMobs"
 		],
 		"client": [
-			"com.practical_plushies_animals.PracticalPlushiesAnimalsClient"
+			"com.practical_plushies_mobs.PracticalPlushiesMobsClient"
 		],
 		"fabric-datagen": [
-			"com.practical_plushies_animals.datagen.DataGeneration"
+			"com.practical_plushies_mobs.datagen.DataGeneration"
 		]
 	},
 	"mixins": [
-		"practical_plushies_animals.mixins.json"
+      "practical_plushies_mobs.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.24",

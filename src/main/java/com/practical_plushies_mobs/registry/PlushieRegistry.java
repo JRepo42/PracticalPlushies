@@ -1,12 +1,11 @@
-package com.practical_plushies_animals.registry;
+package com.practical_plushies_mobs.registry;
 
-import com.practical_plushies_animals.PracticalPlushiesAnimals;
-import com.practical_plushies_animals.datagen.PlushieLootTables;
-import com.practical_plushies_animals.plushies.variants.BigFloorPlushie;
-import com.practical_plushies_animals.plushies.variants.BigPlushie;
-import com.practical_plushies_animals.plushies.variants.FloorPlushie;
-import com.practical_plushies_animals.plushies.Plushie;
-import com.practical_plushies_animals.plushies.variants.SmallPlushie;
+import com.practical_plushies_mobs.PracticalPlushiesMobs;
+import com.practical_plushies_mobs.datagen.PlushieLootTables;
+import com.practical_plushies_mobs.plushies.variants.BigFloorPlushie;
+import com.practical_plushies_mobs.plushies.variants.BigPlushie;
+import com.practical_plushies_mobs.plushies.variants.FloorPlushie;
+import com.practical_plushies_mobs.plushies.variants.SmallPlushie;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -73,8 +72,8 @@ public class PlushieRegistry {
     }
 
     public static void registerPlushie(Block plushieInstance, String identifier) {
-        Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesAnimals.MODID, identifier), plushieInstance);
-        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesAnimals.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
+        Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesMobs.MODID, identifier), plushieInstance);
+        Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesMobs.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
         plushies.add(plushieInstance);
     }
 }

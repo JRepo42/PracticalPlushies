@@ -1,6 +1,6 @@
-package com.practical_plushies_animals.registry;
+package com.practical_plushies_mobs.registry;
 
-import com.practical_plushies_animals.PracticalPlushiesAnimals;
+import com.practical_plushies_mobs.PracticalPlushiesMobs;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
@@ -16,7 +16,7 @@ public class PlushieItemGroupRegistry {
     private static Block[] plushieArray;
 
     public static void addItemGroupEntries(ArrayList<Block> blockArray) {
-        PracticalPlushiesAnimals.LOGGER.info(blockArray.toString());
+        PracticalPlushiesMobs.LOGGER.info(blockArray.toString());
         plushieArray = blockArray.toArray(new Block[0]);
     }
 
@@ -31,6 +31,6 @@ public class PlushieItemGroupRegistry {
             .build();
 
     public static void register() {
-        Registry.register(Registries.ITEM_GROUP, new Identifier(PracticalPlushiesAnimals.MODID, "plushie_group"), ITEM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, new Identifier(PracticalPlushiesMobs.MODID, "plushie_group"), ITEM_GROUP);
     }
 }

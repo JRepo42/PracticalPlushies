@@ -1,4 +1,4 @@
-package com.practical_plushies_animals.particle;
+package com.practical_plushies_mobs.particle;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

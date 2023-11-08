@@ -1,14 +1,14 @@
-package com.practical_plushies_animals;
+package com.practical_plushies_mobs;
 
-import com.practical_plushies_animals.particle.PlushieAppearanceParticle;
-import com.practical_plushies_animals.registry.PlushieParticleRegistry;
-import com.practical_plushies_animals.registry.PlushieRegistry;
+import com.practical_plushies_mobs.particle.PlushieAppearanceParticle;
+import com.practical_plushies_mobs.registry.PlushieParticleRegistry;
+import com.practical_plushies_mobs.registry.PlushieRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.render.RenderLayer;
 
-public class PracticalPlushiesAnimalsClient implements ClientModInitializer {
+public class PracticalPlushiesMobsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ParticleFactoryRegistry.getInstance().register(PlushieParticleRegistry.ALLAY_PLUSHIE_APPEARANCE, new PlushieAppearanceParticle.Factory("allay"));

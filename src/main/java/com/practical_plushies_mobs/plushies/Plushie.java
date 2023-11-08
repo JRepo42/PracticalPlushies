@@ -1,4 +1,4 @@
-package com.practical_plushies_animals.plushies;
+package com.practical_plushies_mobs.plushies;
 
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;

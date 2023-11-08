@@ -1,7 +1,6 @@
-package com.practical_plushies_animals.datagen;
+package com.practical_plushies_mobs.datagen;
 
-import com.practical_plushies_animals.plushies.Plushie;
-import com.practical_plushies_animals.registry.PlushieRegistry;
+import com.practical_plushies_mobs.registry.PlushieRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;

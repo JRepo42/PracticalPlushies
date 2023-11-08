@@ -1,4 +1,4 @@
-package com.practical_plushies_animals.datagen;
+package com.practical_plushies_mobs.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

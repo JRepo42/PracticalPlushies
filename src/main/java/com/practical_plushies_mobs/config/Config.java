@@ -1,8 +1,8 @@
-package com.practical_plushies_animals.config;
+package com.practical_plushies_mobs.config;
 
 import java.nio.file.Path;
 
-import com.practical_plushies_animals.PracticalPlushiesAnimals;
+import com.practical_plushies_mobs.PracticalPlushiesMobs;
 
 import elocindev.necronomicon.config.NecConfig;
 import net.fabricmc.loader.api.FabricLoader;
@@ -17,7 +17,7 @@ public class Config {
         if (!folder.toFile().exists())
             folder.toFile().mkdir();
 
-        return folder.resolve(PracticalPlushiesAnimals.CONFIG_FILE).toString();
+        return folder.resolve(PracticalPlushiesMobs.CONFIG_FILE).toString();
     }
 
     public boolean enable_drops = true;

@@ -2,8 +2,8 @@
 	"credit": "Made by Nog's Menagerie",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "practical_plushies_mobs:block/axolotl_plushie",
-		"particle": "practical_plushies_mobs:block/axolotl_plushie"
+		"0": "practical_plushies_mobs:block/creeper_plushie",
+		"particle": "practical_plushies_mobs:block/creeper_plushie"
 	},
 	"elements": [
 		{

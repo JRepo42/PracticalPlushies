@@ -45,7 +45,7 @@ public class PlushieRegistry {
         registerPlushie(WITHER_SKELETON_PLUSHIE, "wither_skeleton_plushie");
         registerPlushie(ZOGLIN_PLUSHIE, "zoglin_plushie");
         registerPlushie(ZOMBIE_PLUSHIE, "zombie_plushie");
-        registerPlushie(SKELETON_HORSE_PLUSHIE, "skeleton_hose_plushie");
+        registerPlushie(SKELETON_HORSE_PLUSHIE, "skeleton_horse_plushie");
 
         PlushieLootTables.addDropEntries(plushies);
         PlushieItemGroupRegistry.addItemGroupEntries(plushies);

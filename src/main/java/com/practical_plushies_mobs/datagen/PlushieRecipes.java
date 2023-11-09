@@ -20,7 +20,6 @@ public class PlushieRecipes extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        // Todo: fix recipes
         generatePlushieRecipe(PlushieRegistry.CREEPER_PLUSHIE, Blocks.LIME_WOOL, Blocks.GREEN_WOOL, Items.GUNPOWDER, exporter);
         generatePlushieRecipe(PlushieRegistry.ENDERMAN_PLUSHIE, Blocks.BLACK_WOOL, Blocks.MAGENTA_WOOL, Items.ENDER_EYE, exporter);
         generatePlushieRecipe(PlushieRegistry.GHAST_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.GHAST_TEAR, exporter);

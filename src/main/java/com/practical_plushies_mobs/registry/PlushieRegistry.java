@@ -2,10 +2,7 @@ package com.practical_plushies_mobs.registry;
 
 import com.practical_plushies_mobs.PracticalPlushiesMobs;
 import com.practical_plushies_mobs.datagen.PlushieLootTables;
-import com.practical_plushies_mobs.plushies.variants.BigFloorPlushie;
-import com.practical_plushies_mobs.plushies.variants.BigPlushie;
-import com.practical_plushies_mobs.plushies.variants.FloorPlushie;
-import com.practical_plushies_mobs.plushies.variants.SmallPlushie;
+import com.practical_plushies_mobs.plushies.variants.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -22,16 +19,16 @@ public class PlushieRegistry {
 
     private static FabricBlockSettings DEFAULT_PLUSHIE_SETTINGS = FabricBlockSettings.create().strength(0.5f).nonOpaque().sounds(BlockSoundGroup.WOOL);
 
-    public static final Block CREEPER_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
-    public static final Block ENDERMAN_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
-    public static final Block GHAST_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
-    public static final Block PHANTOM_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block CREEPER_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block ENDERMAN_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block GHAST_PLUSHIE = new HugePlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block PHANTOM_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block SKELETON_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block SPIDER_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block WITCH_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block WITHER_SKELETON_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
-    public static final Block ZOGLIN_PLUSHIE = new SmallPlushie(DEFAULT_PLUSHIE_SETTINGS);
-    public static final Block ZOMBIE_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block ZOGLIN_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
+    public static final Block ZOMBIE_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block SKELETON_HORSE_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
 
     public static void register() {

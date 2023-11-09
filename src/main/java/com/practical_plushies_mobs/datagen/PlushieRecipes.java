@@ -21,17 +21,17 @@ public class PlushieRecipes extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         // Todo: fix recipes
-        generatePlushieRecipe(PlushieRegistry.CREEPER_PLUSHIE, Blocks.LIGHT_BLUE_WOOL, Blocks.CYAN_WOOL, Items.IRON_INGOT, exporter);
-        generatePlushieRecipe(PlushieRegistry.ENDERMAN_PLUSHIE, Blocks.PINK_WOOL, Blocks.MAGENTA_WOOL, Items.WATER_BUCKET, exporter);
-        generatePlushieRecipe(PlushieRegistry.GHAST_PLUSHIE, Blocks.YELLOW_WOOL, Blocks.BLACK_WOOL, Items.HONEYCOMB, exporter);
-        generatePlushieRecipe(PlushieRegistry.PHANTOM_PLUSHIE, Blocks.LIGHT_GRAY_WOOL, Blocks.GRAY_WOOL, Items.EGG, exporter);
-        generatePlushieRecipe(PlushieRegistry.SKELETON_PLUSHIE, Blocks.BROWN_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.MILK_BUCKET, exporter);
-        generatePlushieRecipe(PlushieRegistry.SPIDER_PLUSHIE, Blocks.ORANGE_WOOL, Blocks.BROWN_WOOL, Items.SWEET_BERRIES, exporter);
-        generatePlushieRecipe(PlushieRegistry.WITCH_PLUSHIE, Blocks.RED_WOOL, Blocks.LIGHT_BLUE_WOOL, Items.FEATHER, exporter);
-        generatePlushieRecipe(PlushieRegistry.WITHER_SKELETON_PLUSHIE, Blocks.RED_WOOL, Blocks.LIGHT_BLUE_WOOL, Items.FEATHER, exporter);
-        generatePlushieRecipe(PlushieRegistry.ZOGLIN_PLUSHIE, Blocks.PINK_WOOL, Blocks.MAGENTA_WOOL, Items.CARROT, exporter);
-        generatePlushieRecipe(PlushieRegistry.ZOMBIE_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.WHEAT, exporter);
-        generatePlushieRecipe(PlushieRegistry.SKELETON_HORSE_PLUSHIE, Blocks.LIME_WOOL, Blocks.GREEN_WOOL, Items.TURTLE_EGG, exporter);
+        generatePlushieRecipe(PlushieRegistry.CREEPER_PLUSHIE, Blocks.LIME_WOOL, Blocks.GREEN_WOOL, Items.GUNPOWDER, exporter);
+        generatePlushieRecipe(PlushieRegistry.ENDERMAN_PLUSHIE, Blocks.BLACK_WOOL, Blocks.MAGENTA_WOOL, Items.ENDER_EYE, exporter);
+        generatePlushieRecipe(PlushieRegistry.GHAST_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.GHAST_TEAR, exporter);
+        generatePlushieRecipe(PlushieRegistry.PHANTOM_PLUSHIE, Blocks.BLUE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.PHANTOM_MEMBRANE, exporter);
+        generatePlushieRecipe(PlushieRegistry.SKELETON_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.BOW, exporter);
+        generatePlushieRecipe(PlushieRegistry.SPIDER_PLUSHIE, Blocks.BLACK_WOOL, Blocks.GRAY_WOOL, Items.STRING, exporter);
+        generatePlushieRecipe(PlushieRegistry.WITCH_PLUSHIE, Blocks.PURPLE_WOOL, Blocks.GRAY_WOOL, Items.RED_MUSHROOM, exporter);
+        generatePlushieRecipe(PlushieRegistry.WITHER_SKELETON_PLUSHIE, Blocks.BLACK_WOOL, Blocks.GRAY_WOOL, Items.COAL, exporter);
+        generatePlushieRecipe(PlushieRegistry.ZOGLIN_PLUSHIE, Blocks.PINK_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.GOLD_INGOT, exporter);
+        generatePlushieRecipe(PlushieRegistry.ZOMBIE_PLUSHIE, Blocks.GREEN_WOOL, Blocks.PURPLE_WOOL, Items.ROTTEN_FLESH, exporter);
+        generatePlushieRecipe(PlushieRegistry.SKELETON_HORSE_PLUSHIE, Blocks.WHITE_WOOL, Blocks.LIGHT_GRAY_WOOL, Items.SADDLE, exporter);
     }
 
     private void generatePlushieRecipe(Block outputPlushie, Block primaryWool, Block secondaryWool, Item specialItem, Consumer<RecipeJsonProvider> exporter) {

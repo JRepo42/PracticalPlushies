@@ -1,7 +1,6 @@
 package com.practical_plushies_mobs.registry;
 
 import com.practical_plushies_mobs.PracticalPlushiesMobs;
-import com.practical_plushies_mobs.datagen.PlushieLootTables;
 import com.practical_plushies_mobs.plushies.variants.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -15,8 +14,6 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 
 public class PlushieRegistry {
-    private static ArrayList<Block> plushies = new ArrayList<>();
-
     private static FabricBlockSettings DEFAULT_PLUSHIE_SETTINGS = FabricBlockSettings.create().strength(0.5f).nonOpaque().sounds(BlockSoundGroup.WOOL);
 
     public static final Block CREEPER_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
@@ -31,6 +28,20 @@ public class PlushieRegistry {
     public static final Block ZOMBIE_PLUSHIE = new BigPlushie(DEFAULT_PLUSHIE_SETTINGS);
     public static final Block SKELETON_HORSE_PLUSHIE = new FloorPlushie(DEFAULT_PLUSHIE_SETTINGS);
 
+    public static final ArrayList<Block> PLUSHIES = new ArrayList<Block>() {{
+        add(CREEPER_PLUSHIE);
+        add(ENDERMAN_PLUSHIE);
+        add(GHAST_PLUSHIE);
+        add(PHANTOM_PLUSHIE);
+        add(SKELETON_PLUSHIE);
+        add(SPIDER_PLUSHIE);
+        add(WITCH_PLUSHIE);
+        add(WITHER_SKELETON_PLUSHIE);
+        add(ZOGLIN_PLUSHIE);
+        add(ZOMBIE_PLUSHIE);
+        add(SKELETON_HORSE_PLUSHIE);
+    }};
+
     public static void register() {
         registerPlushie(CREEPER_PLUSHIE, "creeper_plushie");
         registerPlushie(ENDERMAN_PLUSHIE, "enderman_plushie");
@@ -44,13 +55,11 @@ public class PlushieRegistry {
         registerPlushie(ZOMBIE_PLUSHIE, "zombie_plushie");
         registerPlushie(SKELETON_HORSE_PLUSHIE, "skeleton_horse_plushie");
 
-        PlushieLootTables.addDropEntries(plushies);
-        PlushieItemGroupRegistry.addItemGroupEntries(plushies);
+        PlushieItemGroupRegistry.addItemGroupEntries(PLUSHIES);
     }
 
     public static void registerPlushie(Block plushieInstance, String identifier) {
         Registry.register(Registries.BLOCK, new Identifier(PracticalPlushiesMobs.MODID, identifier), plushieInstance);
         Registry.register(Registries.ITEM, new Identifier(PracticalPlushiesMobs.MODID, identifier), new BlockItem(plushieInstance, new FabricItemSettings()));
-        plushies.add(plushieInstance);
     }
 }
